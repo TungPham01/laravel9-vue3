@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// không sử dụng route của laravel mà thay vào đó là route của vue
+Route::view('/{any}', "app")->where("any", ".*");
